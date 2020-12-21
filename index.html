@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <!-- <embed src="https://artlist.io/song/50768/omw"> -->
+    <!-- <embed src="https://artlist.io/song/50768/omw" autostart=true hidden=true> -->
+    <iframe width="50%" height="150" scrolling="no" frameborder="no" allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/96722464&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    <div
+        style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+        <a href="https://soundcloud.com/eliana-cogine" title="lihcogine" target="_blank"
+            style="color: #cccccc; text-decoration: none;">lihcogine</a> · <a
+            href="https://soundcloud.com/eliana-cogine/sets/musicas-relaxantes" title="musicas relaxantes"
+            target="_blank" style="color: #cccccc; text-decoration: none;">musicas relaxantes</a></div>
+    <style>
+        .parallax {
+            width: 100%;
+            height: 50vh;
+            background-image: url("http://eve-f.netease.com/forum/201810/01/113216s2zw6vzblvsy88qs.jpg");
+
+            background-position: center;
+            background-size: cover;
+            /* 大小 cover contain */
+
+            /* 如果是用contain的話要記得 */
+            /* background-repeat: no-repeat; */
+
+            background-attachment: fixed;
+
+            font-size: 70px;
+            font-weight: 900;
+            color: rgb(248, 251, 45);
+
+
+        }
+
+        footer {
+            width: 100%;
+            height: 20vh;
+            background-color: gray;
+        }
+
+        .scene {
+
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-around;
+            -webkit-perspective: 800px;
+            perspective: 800px;
+        }
+
+        .scene .card {
+            position: relative;
+            width: 240px;
+            height: 300px;
+            color: white;
+            cursor: pointer;
+            -webkit-transition: 1s ease-in-out;
+            transition: 1s ease-in-out;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+        .scene .card:hover {
+            -webkit-transform: rotateY(0.5turn);
+            transform: rotateY(0.5turn);
+        }
+
+        .scene .card .card__face {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transition: 1s ease-in-out;
+            transition: 1s ease-in-out;
+            -webkit-box-reflect: below 0 linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4));
+        }
+
+        .scene .card .card__face img {
+            width: 240px;
+            height: 300px;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+
+        .scene .card .card__face--back {
+            -webkit-transform: rotateY(0.5turn);
+            transform: rotateY(0.5turn);
+        }
+
+
+
+        .parallax00 .parallax01:nth-child(1) img {
+            /* width: 100vw; */
+            margin: auto;
+        }
+
+
+        .parallax00 .parallax01:nth-child(2) img {
+            /* width: 100vw; */
+            margin: auto;
+        }
+
+
+        .parallax01 img {
+
+            width: 50vw;
+            height: 50vh;
+            margin: auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- 黑暗變種幻燈片 -->
+    <section>
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></li>
+                <li data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="http://eve-f.netease.com/forum/201810/01/113214tn6xlxaljz7jz0da.jpg" class="d-block w-100"
+                        alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="http://eve-f.netease.com/forum/201810/01/113218pijjcljec4f0iorc.jpg" class="d-block w-100"
+                        alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="http://eve-f.netease.com/forum/201810/01/113219rplugh0g4g7qcwl7.jpg" class="d-block w-100"
+                        alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleDark" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleDark" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+    </section>
+    <!-- 3格欄位 有Py 5 -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- 卡片框架 -->
+                <div class="col-lg-4">
+                    <!-- 卡片 -->
+                    <div class="card01 w-100">
+                        <!-- 卡片圖 -->
+                        <img src="http://eve-f.netease.com/forum/201810/01/113216uxdgr3bjq32q6yjj.jpg"
+                            class="card-img-top" alt="...">
+                        <!-- 卡片文字框-->
+                        <div class="card-body">
+                            <!-- 卡片標題 -->
+                            <h5 class="card-title">Card title</h5>
+                            <!-- 卡片文字 -->
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <!-- 卡片按鈕 -->
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- 卡片框架 -->
+                <div class="col-lg-4">
+                    <!-- 卡片 -->
+                    <div class="card01 w-100">
+                        <!-- 卡片圖 -->
+                        <img src="http://eve-f.netease.com/forum/201810/01/113216uxdgr3bjq32q6yjj.jpg"
+                            class="card-img-top" alt="...">
+                        <!-- 卡片文字框-->
+                        <div class="card-body">
+                            <!-- 卡片標題 -->
+                            <h5 class="card-title">Card title</h5>
+                            <!-- 卡片文字 -->
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.</p>
+                            <!-- 卡片按鈕 -->
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card01 w-100 ">
+                        <!-- 翻轉卡片專用 -->
+                        <div class="scene">
+                            <div class="card">
+                                <div class="card__face card__face--front">
+                                    <img src="https://i.loli.net/2019/10/18/uXF1Kx7lzELB6wf.jpg" />
+                                </div>
+                                <div class="card__face card__face--back">
+                                    <img src="https://i.loli.net/2019/11/03/RtVq2wxQYySDb8L.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 卡片圖 -->
+                        <!-- <img src="http://eve-f.netease.com/forum/201810/01/113216uxdgr3bjq32q6yjj.jpg"
+                            class="card-img-top" alt="..."> -->
+                        <!-- 卡片文字框-->
+                        <div class="card-body">
+                            <!-- 卡片標題 -->
+                            <h5 class="card-title">Card title</h5>
+                            <!-- 卡片文字 -->
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.</p>
+                            <!-- 卡片按鈕 -->
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- 背景parallax這裡有+CSS -->
+    <section class="parallax d-flex justify-content-center align-items-center">
+        <span>EVE</span>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h1 class="text-center mb-3">我是標題</h1>
+            <div class="row g-0">
+                <div class="col-lg-6">
+                    <!-- 圖 -->
+                    <img class="w-100" src="http://eve-f.netease.com/forum/201810/01/113216q02vurmj0mzunz0r.jpg" alt="">
+                </div>
+                <div class="col-lg-6 px-4 d-flex align-items-center mb-4 mb-lg-0 border">
+                    <!-- 文 -->
+                    <span>我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字</span>
+                </div>
+                <div class="col-lg-6 px-4 d-flex align-items-center order-1 order-lg-0 border">
+                    <!-- 文 -->
+                    <span>我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字我是一堆文字</span>
+                </div>
+                <div class="col-lg-6">
+                    <!-- 圖 -->
+                    <img class="w-100" src="http://eve-f.netease.com/forum/201810/01/113214y6po1l64r9ul9uuy.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="scene">
+            <div class="card">
+                <div class="card__face card__face--front">
+                    <img src="https://i.loli.net/2019/11/23/cnKl1Ykd5rZCVwm.jpg" />
+                </div>
+                <div class="card__face card__face--back">
+                    <img src="https://i.loli.net/2019/11/16/cqyJiYlRwnTeHmj.jpg" />
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__face card__face--front">
+                    <img src="https://i.loli.net/2019/11/16/FLnzi5Kq4tkRZSm.jpg" />
+                </div>
+                <div class="card__face card__face--back">
+                    <img src="https://i.loli.net/2019/10/18/buDT4YS6zUMfHst.jpg" />
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- parallax.js  疊層晃動效果-->
+
+    <!-- <section>
+        <div class="scene">
+        <div class="card" data-relative-input="true" id="scene">
+            <div class="card__face card__face--front" data-depth="0.2"><img src="https://i.loli.net/2019/10/18/buDT4YS6zUMfHst.jpg" />My first Layer!</div>
+            <div class="card__face card__face--back" data-depth="0.2"><img src="https://i.loli.net/2019/11/16/FLnzi5Kq4tkRZSm.jpg" />My second Layer!</div>
+        </div></div>
+        
+
+    </section> -->
+
+    <!-- parallax.js  疊層晃動效果-->
+    <section>
+
+        <div class="parallax00" data-relative-input="true" id="scene">
+            <div class="parallax01" data-depth="0.2"><img src="https://i.loli.net/2019/10/18/buDT4YS6zUMfHst.jpg" />My
+                first Layer!</div>
+            <div class="parallax01" data-depth="0.5"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqdBZ5SAGSsyidAnJDd_xo-s6mJ-0fqbf2bw&usqp=CAU" />My
+                second Layer!</div>
+        </div>
+        </div>
+
+
+    </section>
+
+    <footer>footer</footer>
+
+
+    <!-- parallaxJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <!-- Bootstrap5.0 -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+        crossorigin="anonymous"></script>
+
+
+    <!-- parallaxJS -->
+    <script>
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene, {
+            relativeInput: true
+        });
+        parallaxInstance.friction(0.5, 0.2);
+    </script>
+
+
+</body>
+
+</html>
